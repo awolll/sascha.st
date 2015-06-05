@@ -1,0 +1,15 @@
+<IfModule mod_rewrite.c>
+Options +FollowSymLinks
+RewriteEngine on
+
+RewriteCond %{HTTP_HOST} ^www\.scha\.st$ [NC]
+RewriteRule ^(.*)$ http://sascha.st/$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^scha.st$ [NC]
+RewriteRule ^(.*)$ http://sascha.st/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^(www.)?sascha.st$
+RewriteRule ^(/)?$ einbock [L]
+
+</IfModule>
+
+Options All -Indexes

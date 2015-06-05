@@ -1,0 +1,23 @@
+span.note {
+  display: block;
+  margin: -10px 0px 15px 0px;
+  padding: 0px;
+  font-size: 11px;
+}
+span.note a {
+  color: inherit;
+}
+span.note a:hover {
+  color: black;
+}
+pre {
+  display: block;
+  margin: 0px 0px 15px 0px;
+  padding: 10px 15px;
+  border-radius: 2px;
+  background: #e8e8e8;
+  box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.3);
+  font-size: 12px;
+  color: #202020;
+}
+
