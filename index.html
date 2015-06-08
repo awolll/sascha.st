@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="css/foundation.css" />
-    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/jquery-2.1.4.min.js"></script>
     <script src="js/foundation.min.js"></script>
    	<script type="text/javascript" src="js/freezeframe.js"></script>
 <!--<script src="js/vendor/modernizr.js"></script>-->
@@ -111,7 +111,7 @@
 	    	<div id="claim" class="row">
 	    		<div class="large-12 columns text-center">
 	    			<h1 style="font-size: 5em;margin-bottom: 40px;">Moinsen</h1>
-					<h2 style="font-size: 2em;color: white;">I am Sascha, designer and creator of stories.</h2>
+					<h2 style="font-size: 2em;color: white;">I am Sascha, <a href="#who">designer</a> and <a href="#untold">creator of stories</a>.</h2>
 
 	    		</div>
 	    	</div>
@@ -119,12 +119,10 @@
 		</div>
     </div>
     
-
 	<!-- WHO -->
 	<div id="who" class="fullWidth">
 		<div class="row">
 	  <div class="large-12 columns">
-
 	        <div class="row">
 	        	<div class="large-3 medium-4 small-12 columns">
 		    		<p class="text-center">
@@ -155,11 +153,14 @@
     
     </div>
     
-    
 	<div id="untold" class="row fullWidth">
 		<div class="large-12 columns text-center">
 
-			<a class="img" href="http://untold.st" target="_blank"><img class="freezeframe" src="img/untold_stories_ani_siberia_min.gif" /></a>
+			<img class="freezeframe" src="img/untold_stories_ani.gif" alt="" />
+			
+			<br />
+			
+			visit <a class="on-light-bg" href="http://untold.st" target="_blank">untold.st</a>
 
 			<br /><br />
 
@@ -250,9 +251,6 @@
         return true;
       });
       
-      $('a').hover(function() {
-          $('.element').text($(this).text());
-      });
       
       freezeframe_options = {
       	loading_background_color: "#fff",
@@ -263,6 +261,7 @@
       	animation_fade_out_speed: "133",
       	animation_icon_image: "img/stop-me.png"
       }
+    
     
      </script>
     

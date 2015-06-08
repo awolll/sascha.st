@@ -2220,7 +2220,7 @@ td {
 
 /* Default Link Styles */
 a {
-  color: #a8a4a8;
+  color: #bfbfbf;
   text-decoration: none;
   border-bottom: 2px solid #666;
   line-height: inherit; }
@@ -2234,6 +2234,33 @@ a {
   a img, a.img {
     border: none;
     text-decoration: none; }
+
+/* special link styles */
+
+a.on-light-bg {
+	color: #221122;
+	border-bottom: 2px solid #ccc;
+}
+.on-light-bg a:visited {
+	color: #221122;
+	border-bottom: 2px solid #ebebeb;
+}
+.on-light-bg a:hover, .on-light-bg a:focus, .on-light-bg a:visited:hover {
+	border-bottom: 2px solid #f3b41b;
+}
+
+#claim a {
+	color: #fff;
+	border-bottom: 2px solid #666;
+}
+#claim a:visited {
+	color: #fff;
+	border-bottom: 2px solid #666;
+}
+#claim a:hover, #claim a:focus, #claim a:visited:hover {
+	border-bottom: 2px solid #f3b41b;
+}
+
 
 #logo-ctn a, #logo-ctn a:hover, #logo-ctn a:focus, #logo-ctn a:visited, #logo-ctn a:visited:hover {
   text-decoration: none;
@@ -3199,7 +3226,7 @@ th.hide-for-touch {
 }
 
 #topbar {
-	padding-top: 2.3rem;
+	padding: 2.3rem 1.6rem 0 2.3rem;
 }
 
 #logo-ctn {
@@ -3492,7 +3519,7 @@ h2.heading:after {
 }
 
 #who p {
-	color: #a8a4a8;
+	color: #bfbfbf;
 }
 
 #who h2.heading:after {
@@ -3511,7 +3538,7 @@ h2.heading:after {
 	margin-top: 1rem;
 }
 #crappella {
-	min-height: 300px;
+	min-height: 133px;
 	background-color: #191B2A;
 }
 
@@ -3657,11 +3684,11 @@ h2.heading:after {
 
 #footer {
 	margin-bottom: 0;
-	padding-top: 1.5rem;
+	padding: 1.6rem 1.6rem 0;
 	max-width: 100%;
 	width: 100%;
 	height: 66px;
-	min-height: 66px;
+	min-height: 99px;
 	background-color: #1D2B35;	
 }
 
