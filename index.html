@@ -9,9 +9,7 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="css/foundation.css" />
-    <script src="js/vendor/jquery-2.1.4.min.js"></script>
-    <script src="js/foundation.min.js"></script>
-   	<script type="text/javascript" src="js/freezeframe.js"></script>
+
 <!--<script src="js/vendor/modernizr.js"></script>-->
     
     <script>
@@ -28,7 +26,7 @@
    
     
   </head>
-  <body>
+  <body class="home">
   
     
     <div id="header" class="">
@@ -111,7 +109,7 @@
 	    	<div id="claim" class="row">
 	    		<div class="large-12 columns text-center">
 	    			<h1 style="font-size: 5em;margin-bottom: 40px;">Moinsen</h1>
-					<h2 style="font-size: 2em;color: white;">I am Sascha, <a href="#who">designer</a> and <a href="#untold">creator of stories</a>.</h2>
+					<h2 style="font-size: 2em;color: white;">I am Sascha, <a href="#who">designer</a> and <a href="#gif">creator of stories</a>.</h2>
 
 	    		</div>
 	    	</div>
@@ -124,18 +122,19 @@
 		<div class="row">
 	  <div class="large-12 columns">
 	        <div class="row">
-	        	<div class="large-3 medium-4 small-12 columns">
-		    		<p class="text-center">
+	        	<div class="large-3 medium-4 small-12 columns left">
+		    		<p class="text-left">
 		    		<img src="img/profile.jpg" alt="" />
 		    		</p>
 	    		</div>
-	    		<div class="large-9 medium-8 small-12 columns">
-	    			<p>My name is Sascha and I create friendly user experiences.</p>
-	    			<p>I like to understand how things work and why they sometimes drive us crazy. Personally, I am a big fan of <a href="http://lifehacker.com" target="_blank">life-hacking</a> and saving the day with <a href="http://failblog.cheezburger.com/thereifixedit/tag/duct-tape" target="_blank">duct tape</a>. This might explain why my focus lies on web and mobile apps. As long as users can accomplish something with it, I can try and make it better.</p>
-	    			<p>So far I enjoyed the privilege of working with some of the world’s most renowned companies and brands. Having said that, I also help startups with high hopes and relentless ambition - partly because I like working in agile, data-driven teams keeping things lean and testing as early as possible.</p>
-					<p>To satisfy my curious brain I like to take on big challenges. One of the biggest issues of our time is the demise of quality journalism. That’s why I co-founded <br /><a href="http://untold.st" target="_blank">UNTOLD</a> to re-invent the relationship between readers and writers.
+	    		<div class="large-9 medium-8 small-12 columns text-block left">					
+					<p>My name is Sascha and I am a designer with a curious brain. I like well crafted stories, badass music, traveling the world and not knowing what will happen. I like to understand how things work and why they sometimes drive us crazy. I am a big fan of <a href="http://lifehacker.com" target="_blank">life-hacking</a> and saving the day with <a href="http://failblog.cheezburger.com/thereifixedit/tag/duct-tape" target="_blank">duct tape</a>. This might explain why my focus lies on web and mobile apps. As long as users can accomplish something with it, I can try and make it better.
 					</p>
-					<br /><br /><br /><br />
+					<p>Over the past decade I worked with some of the world’s most renowned companies and agencies but also help startups with high hopes and relentless ambition. Five years ago he dabbled into the startup scene, founded my first venture (guestly, an event management app), failed, cried, read a lot and found stories to be an interesting space to explore.
+					</p>
+					<p>Now I am bootstrapping my second venture, Untold, a storytelling startup trying to make paid journalism work. Scoll on for a fancy GIF...
+					</p>
+					<br /><br />				
 	    		</div>
 	        </div>
 
@@ -156,16 +155,33 @@
 	<div id="untold" class="row fullWidth">
 		<div class="large-12 columns text-center">
 
-			<img class="freezeframe" src="img/untold_stories_ani.gif" alt="" />
+			<img id="gif" class="freezeframe" src="img/untold_stories_ani.gif" alt="" />
 			
-			<br />
+			<br /><br />
 			
 			visit <a class="on-light-bg" href="http://untold.st" target="_blank">untold.st</a>
 
 			<br /><br />
-
+		</div>		
+		
+		<div id="more" class="large-12 columns">
+			<div id="btn-container" class="text-center">
+				<button id="show"><span>Tell me more about it</span></button>
+			</div>
+			<br />
+			<div id="show-more" class="hide text-block">
+				<p>
+				Untold is the second step in our mission to find a viable income source for journalists. Having no cash, we started out with a crow-funding platform where authors could pitch stories for readers to pre-finance. It worked enough to get 3 stories funded and journalists paid. So people are willing to pay for good stories online. That proved the first and most important assumption.<br />
+				Now, with Untold we are learning about storytelling formats and what people will pay for.<br />
+				Our stories are immersive and a bit different every time.
+				</p>
+			</div>
 		</div>
+
+		
 	</div>
+	
+	
     
     
     <div id="footer">
@@ -228,12 +244,41 @@
 		</div>
     </div>
     
-    
+    <script src="js/vendor/jquery-2.1.4.min.js"></script>
+    <script src="js/foundation.min.js"></script>
+<!--<script src="js/freezeframe.js"></script>-->
     <script>
       $(document).foundation();
     
+    $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+            || location.hostname == this.hostname) {
+    
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+               if (target.length) {
+                 $('html,body').animate({
+                     scrollTop: target.offset().top - 66
+                }, 666);
+                return false;
+            }
+        }
+    });
+    
+    
+    $(document).ready(function(){
+        $("#show").click(function(){
+            $("#show-more").toggle();
+            
+            var text = $('#show').text();
+                $('#show').text(
+                    text == "Tell me more about it" ? "Hide that shit" : "Tell me more about it");
+        });
+        
+    });
+    
     <!-- Query animate function to move page to anchors -->
-      $('a').click(function() {
+/*     $('a').click(function() {
         var h = $(this).attr('href');
         if (h.substring(0,2) == '/#') {
           h = h.substring(2);
@@ -251,17 +296,19 @@
         return true;
       });
       
-      
-      freezeframe_options = {
-      	loading_background_color: "#fff",
-      	animation_icon_position: "center center",
-      	touch_device_support: "true",
-      	loading_background_image: "none",
-      	loading_fade_in_speed: "222",
-      	animation_fade_out_speed: "133",
-      	animation_icon_image: "img/stop-me.png"
-      }
-    
+     
+     freezeframe_options = {
+     	loading_background_color: "#fff",
+     	animation_icon_position: "center center",
+     	touch_device_support: "true",
+     	loading_background_image: "none",
+     	loading_fade_in_speed: "222",
+     	animation_fade_out_speed: "133",
+     	animation_icon_image: "img/stop-me.png"
+     }
+   
+   
+*/
     
      </script>
     

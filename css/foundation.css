@@ -1,5 +1,4 @@
 @import url(http://fonts.googleapis.com/css?family=Mate); /* 'Source Sans Pro', 'Mate' Source+Sans+Pro:400,600,300| */
-@import url(fonts/glober-regular/stylesheet.css); /* 'Source Sans Pro', 'Mate' */
 
 meta.foundation-version {
   font-family: "/5.2.2/"; }
@@ -42,33 +41,38 @@ body {
   font-size: 100%; }
 
 body {
-  background-color: #191B2A;
-/* IE10 Consumer Preview */ 
-background-image: -ms-linear-gradient(left, #212030 0%, #191B2A 100%);
-
-/* Mozilla Firefox */ 
-background-image: -moz-linear-gradient(left, #212030 0%, #191B2A 100%);
-
-/* Opera */ 
-background-image: -o-linear-gradient(left, #212030 0%, #191B2A 100%);
-
-/* Webkit (Safari/Chrome 10) */ 
-background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #212030), color-stop(1, #191B2A));
-
-/* Webkit (Chrome 11+) */ 
-background-image: -webkit-linear-gradient(left, #212030 0%, #191B2A 100%);
-
-/* W3C Markup, IE10 Release Preview */ 
-background-image: linear-gradient(to right, #212030 0%, #191B2A 100%);
+  background-color: #fff;
   color: #221122;
   padding: 0;
   margin: 0;
-  font-family: "glober_regularregular", "Source Sans Pro", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Mate", Georgia, Times, serif;
   font-weight: normal;
   font-style: normal;
   line-height: 1;
   position: relative;
-  cursor: default; }
+  cursor: default;
+}
+
+body.home {
+	background-color: #1D2B35;
+	/* IE10 Consumer Preview */ 
+	background-image: -ms-linear-gradient(left, #212030 0%, #191B2A 100%);
+	
+	/* Mozilla Firefox */ 
+	background-image: -moz-linear-gradient(left, #212030 0%, #191B2A 100%);
+	
+	/* Opera */ 
+	background-image: -o-linear-gradient(left, #212030 0%, #191B2A 100%);
+	
+	/* Webkit (Safari/Chrome 10) */ 
+	background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #212030), color-stop(1, #191B2A));
+	
+	/* Webkit (Chrome 11+) */ 
+	background-image: -webkit-linear-gradient(left, #212030 0%, #191B2A 100%);
+	
+	/* W3C Markup, IE10 Release Preview */ 
+	background-image: linear-gradient(to right, #212030 0%, #191B2A 100%);
+}
 
 a:hover {
   cursor: pointer; }
@@ -1102,7 +1106,7 @@ button, .button {
   border-style: solid;
   border-width: 0px;
   cursor: pointer;
-  font-family: "glober_regularregular", "Source Sans Pro", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Mate", Georgia, Times, serif;
   font-weight: normal;
   line-height: normal;
   margin: 0 0 1.25rem;
@@ -1381,7 +1385,7 @@ meta.foundation-mq-topbar {
     color: white;
     padding: 12px 0 12px 0;
     padding-left: 15px;
-    font-family: "glober_regularregular", "Source Sans Pro", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    font-family: "Mate", Georgia, Times, serif;
     font-size: 0.8125rem;
     font-weight: normal;
     text-transform: none;
@@ -2225,7 +2229,7 @@ a {
   border-bottom: 2px solid #666;
   line-height: inherit; }
   a:hover, a:focus, a:visited:hover {
-    border-bottom: 2px solid #f3b41b;
+    border-bottom: 2px solid #e8858b;/*#f3b41b;*/
     }
   a:visited {
     color: #ebebeb;
@@ -2246,7 +2250,7 @@ a.on-light-bg {
 	border-bottom: 2px solid #ebebeb;
 }
 .on-light-bg a:hover, .on-light-bg a:focus, .on-light-bg a:visited:hover {
-	border-bottom: 2px solid #f3b41b;
+	border-bottom: 2px solid #e8858b;
 }
 
 #claim a {
@@ -2258,7 +2262,7 @@ a.on-light-bg {
 	border-bottom: 2px solid #666;
 }
 #claim a:hover, #claim a:focus, #claim a:visited:hover {
-	border-bottom: 2px solid #f3b41b;
+	border-bottom: 2px solid #e8858b;
 }
 
 
@@ -2286,7 +2290,7 @@ p {
 
 /* Default header styles */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "glober_regularregular", "Source Sans Pro", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Mate", Georgia, Times, serif;
   font-weight: normal;
   font-style: normal;
   color: #110911;
@@ -3509,13 +3513,38 @@ h2.heading:after {
 }
 
 #who, #what, #crappella, #snippets, #hook, #legal-de, #legal-en {
-	margin-top: 6.6rem;
+	margin-top: 3.3rem;
 }
 
 #untold {
 	background-color: #fff;
 	margin: 0 auto;
 	padding: 13rem 0 13rem 0;
+}
+#untold button, .button {
+	background-color: #ebebeb;
+    color: #aaa;
+    cursor: pointer;
+    font-family: "Source Sans Pro","Helvetica Neue","Helvetica", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    line-height: normal;
+    position: relative;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    font-size: 0.88rem;
+    border: none;
+    text-transform: uppercase;
+    padding: 0.33rem 1.33rem 0.33rem;
+    transition: background-color 300ms ease-out 0s;
+}
+#more {
+	margin: 0 auto;
+	margin-top: 3em;
+}
+
+#who {
+	margin-top: 9.9rem;
 }
 
 #who p {
@@ -3533,13 +3562,19 @@ h2.heading:after {
 	max-height: 200px;
 	display: inline-block;
 	border: 5px solid #35424b;
-	border: 5px solid rgba(255, 255, 255, .11);
+	border: 5px solid rgba(232, 133, 139, 0.15);
+	border: 5px solid rgba(101, 102, 102, 0.55);
 	border-radius: 50%;
 	margin-top: 1rem;
 }
+.text-block {
+	margin: 0 auto;
+	max-width: 660px;
+	padding-left: 1.1em;
+}
 #crappella {
-	min-height: 133px;
-	background-color: #191B2A;
+	min-height: 111px;
+	background-color: #BFBFBF;
 }
 
 .medium-6 #who img {
@@ -3683,6 +3718,7 @@ h2.heading:after {
 }
 
 #footer {
+    font-family: "Source Sans Pro","Helvetica Neue","Helvetica", Helvetica, Arial, sans-serif;
 	margin-bottom: 0;
 	padding: 1.6rem 1.6rem 0;
 	max-width: 100%;
@@ -3762,12 +3798,6 @@ h2.heading:after {
 	}
 
 }
-
-
-
-
-
-
 
 
 
