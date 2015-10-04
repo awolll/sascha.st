@@ -17,6 +17,13 @@ jQuery(document).ready(function(){
 		}
 	});
 
+	//show the create page if user clicks the show-page button
+	intro.on('click', 'a[data-action="show-page"]', function(event) {
+		event.preventDefault();
+		var id= jQuery(this).attr('href');
+		jQuery(''+id+'').addClass('is-visible');
+	});
+
 	//show the projects slider if user clicks the show-projects button
 	intro.on('click', 'a[data-action="show-projects"]', function(event) {
 		event.preventDefault();
@@ -25,7 +32,7 @@ jQuery(document).ready(function(){
 		//animate single project - entrance animation
 		setTimeout(function(){
 			showProjectPreview(projectsSlider.children('li').eq(0));
-		}, 200);
+		}, 33);
 	});
 
 	intro.on('click', function(event) {
@@ -44,7 +51,9 @@ jQuery(document).ready(function(){
 		} else if ( $(this).parent('li').prev('li').prev('li').prev('li').is('.current')) {
 			nextSides(projectsSlider);
 		} else {
-			singleProjectContent.addClass('is-visible');
+			var id= jQuery(this).attr('href');
+			//singleProjectContent.addClass('is-visible');
+			jQuery(''+id+'').addClass('is-visible');
 		}
 	});
 
