@@ -1,0 +1,24 @@
+/* Font face declarations */
+
+@font-face {
+  font-family: 'Nitti-Light';
+  src: url('Nitti-Light.eot?#iefix') format('embedded-opentype'),  url('Nitti-Light.otf')  format('opentype'),
+	     url('Nitti-Light.woff') format('woff'), url('Nitti-Light.ttf')  format('truetype'), url('Nitti-Light.svg#Nitti-Light') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Nitti-Normal';
+  src: url('Nitti-Normal.eot?#iefix') format('embedded-opentype'),  url('Nitti-Normal.otf')  format('opentype'),
+	     url('Nitti-Normal.woff') format('woff'), url('Nitti-Normal.ttf')  format('truetype'), url('Nitti-Normal.svg#Nitti-Normal') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Nitti-Medium';
+  src: url('Nitti-Medium.eot?#iefix') format('embedded-opentype'),  url('Nitti-Medium.otf')  format('opentype'),
+	     url('Nitti-Medium.woff') format('woff'), url('Nitti-Medium.ttf')  format('truetype'), url('Nitti-Medium.svg#Nitti-Medium') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+
