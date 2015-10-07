@@ -82,26 +82,20 @@ Intro page
 }
 .cd-intro-block.projects-visible {
   /* translate the .cd-intro-block element to reveal the projects slider */
-  -webkit-transform: translateY(-90%);
-  -moz-transform: translateY(-90%);
-  -ms-transform: translateY(-90%);
-  -o-transform: translateY(-90%);
-  transform: translateY(-90%);
+  -webkit-transform: translateY(-95%);
+  -moz-transform: translateY(-95%);
+  -ms-transform: translateY(-95%);
+  -o-transform: translateY(-95%);
+  transform: translateY(-95%);
   box-shadow: 0 2px 2px rgba(192, 177, 185, 0.6);
   cursor: pointer;
+}
+.cd-intro-block.projects-visible #footer{
+ 	padding: 0;
 }
 .cd-intro-block.projects-visible:after {
   /* show arrow icon */
   opacity: 1;
-}
-@media only screen and (min-width: 900px) {
-  .cd-intro-block.projects-visible {
-    -webkit-transform: translateY(-95%);
-    -moz-transform: translateY(-95%);
-    -ms-transform: translateY(-95%);
-    -o-transform: translateY(-95%);
-    transform: translateY(-95%);
-  }
 }
 
 /* -------------------------------- 
@@ -118,9 +112,9 @@ Projects Slider
   height: 100%;
   visibility: hidden;
   background-color: #ebebeb;
-  -webkit-transition: visibility 0s 0.3s;
-  -moz-transition: visibility 0s 0.3s;
-  transition: visibility 0s 0.3s;
+  -webkit-transition: visibility 0s 0.2s;
+  -moz-transition: visibility 0s 0.2s;
+  transition: visibility 0s 0.2s;
 }
 .cd-projects-wrapper::before {
   /* never visible - this is used in jQuery to check the current MQ */
@@ -132,12 +126,6 @@ Projects Slider
   -webkit-transition: visibility 0s 0s;
   -moz-transition: visibility 0s 0s;
   transition: visibility 0s 0s;
-}
-@media only screen and (min-width: 900px) {
-  .cd-projects-wrapper::before {
-    /* never visible - this is used in jQuery to check the current MQ */
-    content: 'desktop';
-  }
 }
 
 .cd-slider {
@@ -192,6 +180,7 @@ Projects Slider
   padding: 1em 1.6em;
   background-color: #fff;
   border-radius: 0 0 .11em .11em;
+  min-height: 66px;
 }
 .cd-slider h2 {
   font-size: 1.5rem;
@@ -210,125 +199,7 @@ Projects Slider
 .cd-slider h2, .cd-slider p {
   line-height: 1.2;
 }
-@media only screen and (min-width: 900px) {
-  .cd-slider {
-    padding: 0;
-    overflow: hidden;
-    -webkit-transition: -webkit-transform 0.3s;
-    -moz-transition: -moz-transform 0.3s;
-    transition: transform 0.3s;
-    /* Force hardware acceleration */
-    -webkit-transform: translateZ(0);
-    -moz-transform: translateZ(0);
-    -ms-transform: translateZ(0);
-    -o-transform: translateZ(0);
-    transform: translateZ(0);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-  }
-  .cd-slider::after {
-    clear: both;
-    content: "";
-    display: table;
-  }
-  .cd-slider li {
-    position: relative;
-    float: left;
-    width: 26vw;
-    margin: 0 0 0 2vw;
-    top: 50%;
-    -webkit-transform: translateX(400%) translateY(-50%) rotate(-10deg);
-    -moz-transform: translateX(400%) translateY(-50%) rotate(-10deg);
-    -ms-transform: translateX(400%) translateY(-50%) rotate(-10deg);
-    -o-transform: translateX(400%) translateY(-50%) rotate(-10deg);
-    transform: translateX(400%) translateY(-50%) rotate(-10deg);
-    -webkit-transition: opacity 0s 0.3s, -webkit-transform 0s 0.3s;
-    -moz-transition: opacity 0s 0.3s, -moz-transform 0s 0.3s;
-    transition: opacity 0s 0.3s, transform 0s 0.3s;
-  }
-  .cd-slider li:first-of-type {
-    margin-left: 9vw;
-  }
-  .cd-slider li.slides-in {
-    /* this class is used to trigger the entrance animation */
-    -webkit-animation: none;
-    -moz-animation: none;
-    animation: none;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    transform: translateY(-50%);
-  }
-    .cd-slider.next li.current {
-    /* next slide animation */
-    -webkit-animation: cd-slide-1 0.5s;
-    -moz-animation: cd-slide-1 0.5s;
-    animation: cd-slide-1 0.5s;
-  }
-  .cd-slider.next li.current + li {
-    -webkit-animation: cd-slide-2 0.5s;
-    -moz-animation: cd-slide-2 0.5s;
-    animation: cd-slide-2 0.5s;
-  }
-  .cd-slider.next li.current + li + li {
-    -webkit-animation: cd-slide-3 0.5s;
-    -moz-animation: cd-slide-3 0.5s;
-    animation: cd-slide-3 0.5s;
-  }
-  .cd-slider.next li.current + li + li + li + li {
-    -webkit-animation: cd-slide-4 0.5s;
-    -moz-animation: cd-slide-4 0.5s;
-    animation: cd-slide-4 0.5s;
-  }
-  .cd-slider.next li.current + li + li + li + li + li {
-    -webkit-animation: cd-slide-5 0.5s;
-    -moz-animation: cd-slide-5 0.5s;
-    animation: cd-slide-5 0.5s;
-  }
-  .cd-slider.next li.current + li + li + li + li + li ~ li {
-    -webkit-animation: cd-slide-6 0.5s;
-    -moz-animation: cd-slide-6 0.5s;
-    animation: cd-slide-6 0.5s;
-  }
-  .cd-slider.prev li {
-    /* previous slide animation */
-    -webkit-animation: cd-slide-7 0.5s;
-    -moz-animation: cd-slide-7 0.5s;
-    animation: cd-slide-7 0.5s;
-  }
-  .cd-slider.prev li.previous {
-    /* previous slide animation - the previous class is used to target the slide which was visible right before the current one */
-    -webkit-animation: cd-slide-1 0.5s;
-    -moz-animation: cd-slide-1 0.5s;
-    animation: cd-slide-1 0.5s;
-  }
-  .cd-slider.prev li.previous + li {
-    -webkit-animation: cd-slide-2 0.5s;
-    -moz-animation: cd-slide-2 0.5s;
-    animation: cd-slide-2 0.5s;
-  }
-  .cd-slider.prev li.previous + li + li {
-    -webkit-animation: cd-slide-3 0.5s;
-    -moz-animation: cd-slide-3 0.5s;
-    animation: cd-slide-3 0.5s;
-  }
-  .cd-slider.prev li.current + li {
-    -webkit-animation: cd-slide-4 0.5s;
-    -moz-animation: cd-slide-4 0.5s;
-    animation: cd-slide-4 0.5s;
-  }
-  .cd-slider.prev li.current + li + li {
-    -webkit-animation: cd-slide-5 0.5s;
-    -moz-animation: cd-slide-5 0.5s;
-    animation: cd-slide-5 0.5s;
-  }
-  .cd-slider.prev li.current, .cd-slider.prev li.current + li + li ~ li {
-    -webkit-animation: none;
-    -moz-animation: none;
-    animation: none;
-  }
-}
+
 
 @-webkit-keyframes cd-slide-1 {
   0%, 100% {
@@ -600,11 +471,6 @@ Project slider navigation
   -moz-transition: opacity 0.2s 0s, visibility 0s 0.2s;
   transition: opacity 0.2s 0s, visibility 0s 0.2s;
 }
-@media only screen and (min-width: 900px) {
-  .cd-slider-navigation {
-    display: block;
-  }
-}
 
 /* -------------------------------- 
 
@@ -682,6 +548,9 @@ Project content panel
   font-size: 2.4rem;
   font-weight: 300;
 }
+.cd-project-content h3{
+	margin-top: 2em;
+}
 .cd-project-content h2.h1 {
   font-size: 3.2rem;
   margin-bottom: 2em;
@@ -718,18 +587,6 @@ Project content panel
 }
 .cd-project-content a.close{
 	border: none;
-}
-@media only screen and (min-width: 900px) {
-  .cd-project-content h2 {
-    font-size: 2.4rem;
-    line-height: 1.3;
-  }
-  .cd-project-content em {
-    font-size: 1.8rem;
-  }
-  .cd-project-content .close {
-    top: 0;
-  }
 }
 
 /* -------------------------------- 
@@ -812,7 +669,7 @@ Keyframes
     max-width: 99%;
 }
 #logo-ctn{
-	margin-top: -0.1em;
+	margin-top: -1px;
 	margin-left: -2.1em;
 }
 
@@ -860,7 +717,7 @@ a {
   color: #2b222b;
   text-decoration: none;
   border-bottom: 2px solid #C0B1B9;
-  line-height: inherit; }
+  line-height: 1.9; }
   a:hover, a:focus, a:visited:hover {
     border-bottom: 2px solid #f2b333;
     }
@@ -874,7 +731,7 @@ a {
 
 /* Default paragraph styles */
 p {
-  font-size: 1em;
+  font-size: 1.1em;
   color: #2b222b;
   line-height: 1.875;
   margin: 1.25em 0;
@@ -913,7 +770,8 @@ h2 {
   font-size: 1.25em; }
 
 h3 {
-  font-size: 1.225em; }
+  font-size: 1.225em;
+}
 
 h4 {
   font-size: 1.125em; }
@@ -1115,3 +973,216 @@ ul.markdown-ul li::before {
 	border-bottom: 1px solid #C0B1B9;
 }
 
+
+/*--- MEDIA QUERIES ---*/
+
+@media only screen and (min-width: 900px) {
+  .cd-intro-block.projects-visible {
+    -webkit-transform: translateY(-95%);
+    -moz-transform: translateY(-95%);
+    -ms-transform: translateY(-95%);
+    -o-transform: translateY(-95%);
+    transform: translateY(-95%);
+  }
+}
+
+@media only screen and (max-width: 899px) {
+	body, html, .home{
+		font-size: 19px;
+	}
+	
+	.cd-project-content > div > *{
+		padding: 0 22px;
+	}
+	
+	.cd-intro-block::after {
+	  /* arrow icon visible when .cd-intro-block slides out */
+	  content: '< hey, back to that lovely page.';
+	  position: absolute;
+	  left: 50%;
+	  top: 50%;
+	  bottom: auto;
+	  right: auto;
+	  top: 97.5%;
+	  background-color: #F9F8F8;
+	  width: 100%;
+	  text-align: left;
+	  height: 3em;
+	  line-height: 1.9;
+	  vertical-align: middle;
+	  padding: 0.6em 1em;
+	  opacity: 0;
+	  -webkit-transition: opacity 0.5s;
+	  -moz-transition: opacity 0.5s;
+	  transition: opacity 0.5s;
+	}
+}
+@media only screen and (min-width: 900px) {
+	.cd-projects-wrapper::before {
+	  /* never visible - this is used in jQuery to check the current MQ */
+	  content: 'desktop';
+	}
+	.cd-slider-navigation {
+	display: block;
+	}
+	.cd-project-content h2 {
+	font-size: 2.4rem;
+	line-height: 1.3;
+	}
+	.cd-project-content em {
+	  font-size: 1.8rem;
+	}
+	.cd-project-content .close {
+	  top: 0;
+	}
+  .cd-slider {
+    padding: 0;
+    overflow: hidden;
+    -webkit-transition: -webkit-transform 0.3s;
+    -moz-transition: -moz-transform 0.3s;
+    transition: transform 0.3s;
+    /* Force hardware acceleration */
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  .cd-slider::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+  .cd-slider li {
+    position: relative;
+    float: left;
+    width: 26vw;
+    margin: 0 0 0 2vw;
+    top: 50%;
+    -webkit-transform: translateX(400%) translateY(-50%) rotate(-10deg);
+    -moz-transform: translateX(400%) translateY(-50%) rotate(-10deg);
+    -ms-transform: translateX(400%) translateY(-50%) rotate(-10deg);
+    -o-transform: translateX(400%) translateY(-50%) rotate(-10deg);
+    transform: translateX(400%) translateY(-50%) rotate(-10deg);
+    -webkit-transition: opacity 0s 0.3s, -webkit-transform 0s 0.3s;
+    -moz-transition: opacity 0s 0.3s, -moz-transform 0s 0.3s;
+    transition: opacity 0s 0.3s, transform 0s 0.3s;
+  }
+  .cd-slider li:first-of-type {
+    margin-left: 9vw;
+  }
+  .cd-slider li.slides-in {
+    /* this class is used to trigger the entrance animation */
+    -webkit-animation: none;
+    -moz-animation: none;
+    animation: none;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+    .cd-slider.next li.current {
+    /* next slide animation */
+    -webkit-animation: cd-slide-1 0.5s;
+    -moz-animation: cd-slide-1 0.5s;
+    animation: cd-slide-1 0.5s;
+  }
+  .cd-slider.next li.current + li {
+    -webkit-animation: cd-slide-2 0.5s;
+    -moz-animation: cd-slide-2 0.5s;
+    animation: cd-slide-2 0.5s;
+  }
+  .cd-slider.next li.current + li + li {
+    -webkit-animation: cd-slide-3 0.5s;
+    -moz-animation: cd-slide-3 0.5s;
+    animation: cd-slide-3 0.5s;
+  }
+  .cd-slider.next li.current + li + li + li + li {
+    -webkit-animation: cd-slide-4 0.5s;
+    -moz-animation: cd-slide-4 0.5s;
+    animation: cd-slide-4 0.5s;
+  }
+  .cd-slider.next li.current + li + li + li + li + li {
+    -webkit-animation: cd-slide-5 0.5s;
+    -moz-animation: cd-slide-5 0.5s;
+    animation: cd-slide-5 0.5s;
+  }
+  .cd-slider.next li.current + li + li + li + li + li ~ li {
+    -webkit-animation: cd-slide-6 0.5s;
+    -moz-animation: cd-slide-6 0.5s;
+    animation: cd-slide-6 0.5s;
+  }
+  .cd-slider.prev li {
+    /* previous slide animation */
+    -webkit-animation: cd-slide-7 0.5s;
+    -moz-animation: cd-slide-7 0.5s;
+    animation: cd-slide-7 0.5s;
+  }
+  .cd-slider.prev li.previous {
+    /* previous slide animation - the previous class is used to target the slide which was visible right before the current one */
+    -webkit-animation: cd-slide-1 0.5s;
+    -moz-animation: cd-slide-1 0.5s;
+    animation: cd-slide-1 0.5s;
+  }
+  .cd-slider.prev li.previous + li {
+    -webkit-animation: cd-slide-2 0.5s;
+    -moz-animation: cd-slide-2 0.5s;
+    animation: cd-slide-2 0.5s;
+  }
+  .cd-slider.prev li.previous + li + li {
+    -webkit-animation: cd-slide-3 0.5s;
+    -moz-animation: cd-slide-3 0.5s;
+    animation: cd-slide-3 0.5s;
+  }
+  .cd-slider.prev li.current + li {
+    -webkit-animation: cd-slide-4 0.5s;
+    -moz-animation: cd-slide-4 0.5s;
+    animation: cd-slide-4 0.5s;
+  }
+  .cd-slider.prev li.current + li + li {
+    -webkit-animation: cd-slide-5 0.5s;
+    -moz-animation: cd-slide-5 0.5s;
+    animation: cd-slide-5 0.5s;
+  }
+  .cd-slider.prev li.current, .cd-slider.prev li.current + li + li ~ li {
+    -webkit-animation: none;
+    -moz-animation: none;
+    animation: none;
+  }
+}
+
+@media only screen 
+and (min-width: 320px) 
+and (max-width: 667px) {
+	body, html, .home{
+		font-size: 16px;
+	}
+	.markdown-h1::before{
+		margin-left: 0;
+	}
+	#logo-ctn > svg{
+		width: 44px;
+		height: 44px;
+	}
+	#header-bottom {
+	    margin-left: 10px;
+	    max-width: 95%;
+	    width: 100%;
+	}
+	.header-sub{
+		line-height: 1.5;
+	}
+	.posthead-img-caption, .cd-project-content em{
+		font-size: 1.5em;
+	}
+}
+
+/* iPhone */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 667px) {
+	
+}
