@@ -548,8 +548,12 @@ Project content panel
   font-size: 2.4rem;
   font-weight: 300;
 }
-.cd-project-content h3{
-	margin-top: 2em;
+.cd-project-content h3 {
+  font-family: 'Nitti-Light', 'Consolas', 'Courier New', Courier, monospace;
+  font-size: 2rem;
+  font-weight: 300;
+  margin-top: 2em;
+  margin-bottom: 1em;
 }
 .cd-project-content h2.h1 {
   font-size: 3.2rem;
@@ -584,6 +588,9 @@ Project content panel
   position: absolute;
   right: 33px;
   background: url(../img/cd-close-dark.svg) no-repeat bottom right;
+}
+.cd-project-content .close {
+  top: 0;
 }
 .cd-project-content a.close{
 	border: none;
@@ -976,16 +983,6 @@ ul.markdown-ul li::before {
 
 /*--- MEDIA QUERIES ---*/
 
-@media only screen and (min-width: 900px) {
-  .cd-intro-block.projects-visible {
-    -webkit-transform: translateY(-95%);
-    -moz-transform: translateY(-95%);
-    -ms-transform: translateY(-95%);
-    -o-transform: translateY(-95%);
-    transform: translateY(-95%);
-  }
-}
-
 @media only screen and (max-width: 899px) {
 	body, html, .home{
 		font-size: 19px;
@@ -1033,7 +1030,12 @@ ul.markdown-ul li::before {
 	  font-size: 1.8rem;
 	}
 	.cd-project-content .close {
-	  top: 0;
+	  display: block;
+	  height: 66px;
+	  width: 100%;
+	  position: absolute;
+	  right: 33px;
+	  background: url(../img/cd-close-dark.svg) no-repeat bottom right;
 	}
   .cd-slider {
     padding: 0;
@@ -1163,6 +1165,9 @@ and (max-width: 667px) {
 	.markdown-h1::before{
 		margin-left: 0;
 	}
+	.markdown-h2::before{
+		margin-left: 0;
+	}
 	#logo-ctn > svg{
 		width: 44px;
 		height: 44px;
@@ -1184,5 +1189,12 @@ and (max-width: 667px) {
 @media only screen 
 and (min-device-width : 320px) 
 and (max-device-width : 667px) {
-	
+	.cd-intro-block.projects-visible {
+	  -webkit-transform: translateY(-97%);
+	  -moz-transform: translateY(-97%);
+	  -ms-transform: translateY(-97%);
+	  -o-transform: translateY(-97%);
+	  transform: translateY(-97%);
+	  box-shadow: 0 2px 2px rgba(192, 177, 185, 0.6);
+	}
 }
