@@ -1190,11 +1190,11 @@ and (max-width: 667px) {
 and (min-device-width : 320px) 
 and (max-device-width : 667px) {
 	.cd-intro-block.projects-visible {
-	  -webkit-transform: translateY(-97%);
-	  -moz-transform: translateY(-97%);
-	  -ms-transform: translateY(-97%);
-	  -o-transform: translateY(-97%);
-	  transform: translateY(-97%);
+	  -webkit-transform: translateY(-96%);
+	  -moz-transform: translateY(-96%);
+	  -ms-transform: translateY(-96%);
+	  -o-transform: translateY(-96%);
+	  transform: translateY(-96%);
 	  box-shadow: 0 2px 2px rgba(192, 177, 185, 0.6);
 	}
 }
