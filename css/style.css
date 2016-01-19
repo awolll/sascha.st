@@ -10,7 +10,7 @@ Primary style
 html,
 body {
   font-size: 100%; }
-
+  
 img {
   max-width: 100%;
 }
@@ -679,6 +679,9 @@ Keyframes
 	margin-top: -1px;
 	margin-left: -2.1em;
 }
+.header-main {
+	color: #4F3F4F;
+}
 
 
 /* Typographic & utility classes */
@@ -759,7 +762,7 @@ h1, h2, h3, h4, h5, h6 {
 	}
 
 h1 {
-  font-family: 'Nitti-Normal', 'Consolas', 'Courier New', Courier, monospace;
+  font-family: 'Nitti-Light', 'Consolas', 'Courier New', Courier, monospace;
   font-size: 2.99em;
   margin-top: 9%;
   margin-bottom: 19%;
@@ -922,6 +925,10 @@ p.caption{
 	margin-left: -0.88em;
 	padding-right: 0.22em;
 }
+.markdown-h1 span{
+	color: #C7BEC3;
+	font-size: 0.8em;
+}
 .markdown-h2::before{
 	content: '##';
 	color: #d7cdd2;
@@ -934,6 +941,9 @@ p.caption{
 	margin-top: -55px;
 	margin-left: -0.7em;
 	padding-right: 0.05em;
+}
+.markdown-quote a {
+	word-spacing: -0.33em;
 }
 ul.markdown-ul {
 	list-style: none;
