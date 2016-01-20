@@ -32,7 +32,7 @@ jQuery(document).ready(function(){
 		//animate single project - entrance animation
 		setTimeout(function(){
 			showProjectPreview(projectsSlider.children('li').eq(0));
-		}, 33);
+		}, 200);
 	});
 
 	intro.on('click', function(event) {
@@ -45,10 +45,11 @@ jQuery(document).ready(function(){
 
 	//select a single project - open project-content panel
 	projectsContainer.on('click', '.cd-slider a', function(event) {
+		var mq = checkMQ();
 		event.preventDefault();
-		if( $(this).parent('li').next('li').is('.current') ) {
+		if( $(this).parent('li').next('li').is('.current') && (mq == 'desktop') ) {
 			prevSides(projectsSlider);
-		} else if ( $(this).parent('li').prev('li').prev('li').prev('li').is('.current')) {
+		} else if ( $(this).parent('li').prev('li').prev('li').prev('li').is('.current')  && (mq == 'desktop') ) {
 			nextSides(projectsSlider);
 		} else {
 			var id= jQuery(this).attr('href');
@@ -98,7 +99,7 @@ jQuery(document).ready(function(){
 			setTimeout(function(){
 				project.addClass('slides-in');
 				showProjectPreview(project.next());
-			}, 10);
+			}, 50);
 		}
 	}
 
@@ -149,7 +150,6 @@ jQuery(document).ready(function(){
 			index = actual.index(),
 			width = actual.width(),
 			marginLeft = Number(slider.children('li').eq(1).css('margin-left').replace('px', ''));
-		console.log(marginLeft);
 
 		translate = index * (width + marginLeft) + 'px';
 
@@ -164,18 +164,18 @@ jQuery(document).ready(function(){
 
 	function updateSlider(direction, actual, slider, numerFollowing) {
 		if( direction == 'next' ) {
+			
 			slider.removeClass('next').find('.previous').removeClass('previous');
 			actual.removeClass('current');
 			if( numerFollowing > 4 ) {
 				actual.addClass('previous').next('li').next('li').next('li').addClass('current');
 			} else if ( numerFollowing == 4 ) {
-				actual.next('li').next('li').addClass('current');
-				actual.prev('li').addClass('previous');
-			} else if( numerFollowing == 3 ) {
-				actual.next('li').addClass('current');
-				actual.prev('li').prev('li').addClass('previous');
+				actual.next('li').next('li').addClass('current').prev('li').prev('li').addClass('previous');
+			} else {
+				actual.next('li').addClass('current').end().addClass('previous');
 			}
 		} else {
+			
 			slider.removeClass('prev').find('.current').removeClass('current');
 			actual.removeClass('previous').addClass('current');
 			if(actual.prevAll('li').length > 2 ) {
