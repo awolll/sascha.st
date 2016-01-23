@@ -27,6 +27,14 @@
 	<meta property="og:site_name" content="sascha steinbock" />
 	<meta property="fb:admins" content="Facebook numeric ID" />
 	
+    <script src="js/jquery.unveil.js"></script>
+
+    <script>
+    $(function() {
+        $("li img").unveil(300);
+    });
+    </script>
+	
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -185,10 +193,9 @@
 			<br />
 			<h3>Care for a bit of a back story?</h3>
 			<p>Four years ago I dabbled into the startup scene, founded my first venture (guest.ly, an event management app), failed, cried, read a lot and found stories to be an interesting space to explore. Then in January 2014 I attended a Startup Weekend in Cologne, Germany, where I met my next co-founders. Stephan is an awesome guy I immediately wanted to create something with. Armin was thinking about how to save journalism. A sublime yet ludicrous undertaking and exactly my kind of megalomania.</p>
-			<p>Out of the excitement of creating beautiful things I jumped right in. Instead, we should have kept our calm, experimented and prototyped until something viable stuck with us and the readers. <br />
-			After two pivots I realized the vision of creating an income source for journalists will not be achieved by prettifying the content and making it more engaging. It needed a large-scale endeavor and it meant stepping away from a publisher model and building a platform to be independent from our own blood and sweat. A place where writers converge with designers and developers to create amazing stories.
-			<br />
-			Not everyone on the team was excited about being a technology company. That’s when I announced I would not continue to work on a publisher model when my heart beats for software (and now hardware as well).</p>
+			<p>Out of the excitement of creating beautiful things I jumped right in. Instead, we should have kept our calm, experimented and prototyped until something viable stuck with us and the readers.</p>
+			<p>After two pivots I realized the vision of creating an income source for journalists will not be achieved by prettifying the content and making it more engaging. It needed a large-scale endeavor and it meant stepping away from a publisher model and building a platform to be independent from our own blood and sweat. A place where writers converge with designers and developers to create amazing stories.</p>
+			<p>Not everyone on the team was excited about being a technology company. That’s when I announced I would not continue to work on a publisher model when my heart beats for software (and now hardware as well).</p>
 			<br /><br />
 		</div>
 		<a href="#" class="close cd-img-replace">Close</a>
@@ -339,7 +346,7 @@
 			<h2 class="markdown-h1">Form design unboring</h2>
 			<em class="grey">No one likes to waste time creating forms. For my first startup I re-imagined this tedious process.</em>
 			<div class="fullWidth center" style="background-color: #252B31;">
-				<img width="800" src="img/assets/guestly_new-form-field_01.png" alt="guestly" />
+				<img width="800" src="img/assets/guestly_forms_v1.svg" alt="guestly" />
 			</div>
 			<br />
 			<p>After researching the most common web-based form builders I cringed and cried. There had to be a better way than dragging form elements from a sidebar into the form. This seems easy enough, you may say. Form design is not just about getting those pesky data inputs on the screen but alleviating some of the pain involved. And we were building a pro tool for event managers. As it turns out they use the same fields over and over, again. So why make them create customs field every time?</p>
@@ -354,7 +361,7 @@
 				<li>Got that one, too.</li>
 			</ul>
 			<div class="fullWidth center" style="background-color: #252B31;">
-				<img width="800" src="img/assets/guestly_new-form-field_02.png" alt="guestly" />
+				<img width="800" src="img/assets/guestly_forms_v2.svg" alt="guestly" />
 			</div>
 			<p class="caption">A version with a lot of pre-configured fields displayed instead of searching for them</p>
 			<br />
@@ -402,8 +409,9 @@
 				Here are two that I think don’t suck. So please be kind. :=)
 			</p>
 			<br />
-			<div class="fullWidth center more-top-margin more-bottom-margin bg-white">
-				<img class="maxWidth" src="img/assets/logos_untold.png" alt="logos untold" />
+			<div class="fullWidth center">
+				<img class="hide-on-mobile fullWidth" src="img/assets/logos_untold.png" alt="untold" />
+				<img class="mobile-only fullWidth" src="img/assets/logos_untold_mobile.png" alt="untold" />
 			</div>
 			<p class="caption">UNTOLD logo play</p>
 			<br /><br />
