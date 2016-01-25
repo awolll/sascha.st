@@ -178,6 +178,10 @@ Intro page
     font-size: 4.4rem;
     font-weight: 300;
   }
+  .crew .cd-intro-block h1 {
+    font-size: 3rem;
+    font-weight: 300;
+  }
   .cd-intro-block.projects-visible {
     -webkit-transform: translateY(-95%);
     -moz-transform: translateY(-95%);
@@ -890,7 +894,7 @@ Keyframes
 
 /* --- TEXT STYLES --- */
 
-.home{
+.home, .crew{
 	font-family: 'Nitti-Light', 'Consolas', 'Courier New', Courier;
 	font-size: 21px;
 	color: #2b222b;
@@ -1312,7 +1316,7 @@ ul.markdown-ul li::before {
 /*--- MEDIA QUERIES ---*/
 
 @media only screen and (max-width: 899px) {
-	body, html, .home{
+	body, html, .home, .crew{
 		font-size: 19px;
 	}
 	
@@ -1418,7 +1422,7 @@ and (max-width: 460px) {
 @media only screen 
 and (min-width: 320px) 
 and (max-width: 667px) {
-	body, html, .home{
+	body, html, .home, .crew{
 		font-size: 16px;
 	}
 	ul {
