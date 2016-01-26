@@ -801,7 +801,6 @@ Project content panel
   margin-top: 2em;
   margin-bottom: 0.5em;
 }
-
 .posthead-img{
 	padding: 2em 0;
 }
@@ -829,7 +828,8 @@ Project content panel
   width: 100%;
   position: absolute;
   right: 33px;
-  background: url('data:image/svg+xml;utf8,<svg class="nc-icon glyph" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="#444" d="M17.4 16L27.7 5.7c.4-.4.4-1 0-1.4s-1-.4-1.4 0L16 14.6 5.7 4.3c-.4-.4-1-.4-1.4 0s-.4 1 0 1.4L14.6 16 4.3 26.3c-.4.4-.4 1 0 1.4.2.2.4.3.7.3s.5-.1.7-.3L16 17.4l10.3 10.3c.2.2.5.3.7.3s.5-.1.7-.3c.4-.4.4-1 0-1.4L17.4 16z"/></svg>') no-repeat bottom right;
+  background: url('../img/cd-close-dark.svg') no-repeat bottom right;
+    background: url('data:image/svg+xml;utf8,<svg class="nc-icon glyph" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="#444" d="M17.4 16L27.7 5.7c.4-.4.4-1 0-1.4s-1-.4-1.4 0L16 14.6 5.7 4.3c-.4-.4-1-.4-1.4 0s-.4 1 0 1.4L14.6 16 4.3 26.3c-.4.4-.4 1 0 1.4.2.2.4.3.7.3s.5-.1.7-.3L16 17.4l10.3 10.3c.2.2.5.3.7.3s.5-.1.7-.3c.4-.4.4-1 0-1.4L17.4 16z"/></svg>') no-repeat bottom right;
 }
 .cd-project-content .close {
   top: 0;
@@ -1203,6 +1203,9 @@ p.caption{
 	color: #aa99a2;
 	margin: 0 auto!important;
 }
+.fullWidth p.caption{
+	padding: 1em 0;
+}
 .more-bottom-margin{
 	margin-bottom: 2.2em!important;
 }
@@ -1310,6 +1313,16 @@ ul.markdown-ul li::before {
 .mobile-only{
 	display: none;
 	visibility: hidden;
+}
+
+/*--- PORTFOLIO STYLES ---*/
+
+.crew .meta{
+	font-family: 'Nitti-Light', 'Consolas', 'Courier New', Courier, monospace;
+	font-size: 1.6rem;
+	font-weight: 300;
+	margin-top: 0.1em;
+	margin-bottom: 0.2em;
 }
 
 
@@ -1492,3 +1505,55 @@ and (max-device-width : 667px) {
 		margin-bottom: 22%;
 	}
 }
+
+
+/* Firefox hacks */
+
+@-moz-document url-prefix() {
+	.cd-project-content .close {
+	  display: block;
+	  height: 66px;
+	  width: 100%;
+	  position: absolute;
+	  right: 33px;
+	  background: url('../img/cd-close-dark.svg') no-repeat bottom right;
+	}
+	.cd-slider-navigation a {
+	  position: absolute;
+	  top: 50%;
+	  bottom: auto;
+	  border: none!important;
+	  -webkit-transform: translateY(-50%);
+	  -moz-transform: translateY(-50%);
+	  -ms-transform: translateY(-50%);
+	  -o-transform: translateY(-50%);
+	  transform: translateY(-50%);
+	  left: 0;
+	  height: 60px;
+	  width: 4%;
+	  -webkit-transition: opacity 0.2s 0s, visibility 0s 0s;
+	  -moz-transition: opacity 0.2s 0s, visibility 0s 0s;
+	  transition: opacity 0.2s 0s, visibility 0s 0s;
+	  background: url('../img/cd-arrow.svg') no-repeat center center;
+	}
+	.markdown-h1.woof::before{
+		content:url('../img/woof.svg');
+		position:relative;
+		top:3px;
+		left: -0.11em;
+	}
+	.large.woof::after{
+		content:url('../img/woof_grey_large.svg');
+		position:relative;
+		top:11px;
+		left: 33px;
+		opacity: 0.7;
+	}
+	#straydog-lnk:hover + .large.woof::after{
+		content:url('../img/woof_large.svg');
+	}
+	
+}
+
+/* another way to target FF */
+/* .selector, x:-moz-any-link, x:default { color:lime; } /* FireFox 3 */
