@@ -1620,7 +1620,6 @@ Keyframes
 
 .right {
   float: right !important; }
-
 .clearfix {
   *zoom: 1; }
   .clearfix:before, .clearfix:after {
@@ -1643,6 +1642,10 @@ Keyframes
 }
 #content{
 	margin-top: 7%;
+}
+.align-right{
+	text-align: right;
+	padding-right: 2em;
 }
 
 
@@ -1669,10 +1672,6 @@ p {
   color: #2b222b;
   line-height: 1.875;
   margin: 1em 0; }
-.crew p{
-	font-size: 1.2em;
-    line-height: 1.75;
-}
 /* Default header styles */
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Nitti-Medium', 'Consolas', 'Courier New', Courier, monospace;
@@ -2081,7 +2080,7 @@ and (max-width: 460px) {
 		left: 0;
 	}
 	p{
-		font-size: 1.3em;
+		font-size: 1.2em;
 	}
 	.apologize{
 		font-size: 1em;
@@ -2102,6 +2101,19 @@ and (max-width: 460px) {
 		font-size: 1.8em;
 		margin-left: -0.4em;
 	}
+	.markdown-quote a{
+		word-spacing: normal;
+	}
+	.align-right{
+		text-align: left;
+		padding: 0;
+	}
+	.right{
+		float: none;
+	}
+	.left{
+		float: none;
+	}	
 }
 
 @media only screen 
