@@ -1,14 +1,11 @@
-/* sascha helmut steinbock (shs) is the manchild behind this shadangadang. He likes to make up words and other nonsense. */
+/* sascha steinbock is the manchild behind this shadangadang. He likes to make up words and other nonsense. */
 /* sascha.st */
 /* humanstxt.org */
 
 /* TEAM */
   Name: Sascha Steinbock
   Site: https://github.com/awolll
-  Bio: 
-  /* */
-  
-
+  Bio:
 /* extended version copied from the website because... why not? */
 /* <h2 class="markdown-h1">About me</h2>
 <p>The two single (double?) worst words in the context of websites. Writing about yourself is dreadful. Like hearing your voice on tape. No one should have to endure this torment. I am sulking and, instead, give you an unordered list of things I have done and leave it to you to make sense of it all. Only the first three are reverse chronological. So here it goes. Good luck.
