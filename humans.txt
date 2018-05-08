@@ -2,7 +2,43 @@
 /* sascha.st */
 /* humanstxt.org */
 
+/* TEAM */
+  Name: Sascha Steinbock
+  Site: https://github.com/awolll
+  Bio: 
+  /* */
+  
+
+/* extended version copied from the website because... why not? */
+/* <h2 class="markdown-h1">About me</h2>
+<p>The two single (double?) worst words in the context of websites. Writing about yourself is dreadful. Like hearing your voice on tape. No one should have to endure this torment. I am sulking and, instead, give you an unordered list of things I have done and leave it to you to make sense of it all. Only the first three are reverse chronological. So here it goes. Good luck.
+</p>		
+<br />
+<p class="apologize">I -sorry- had to start them all with ‘I’ because otherwise they sounded like a checklist and most of this was not going according to plan.</p>
+
+<ul class="markdown-ul">
+  <li>I realized my freelancing had become financially successful. I should do it more often. But startups are more fun.</li>
+  <li>I saw the sunrise above a volcano in Indonesia. It was beautiful and I rarely ever felt so calm.</li>
+  <li>I quit my newly re-branded digital journalism venture UNTOLD.</li>
+  <li>I decided to live on the road for a while. </li>
+  <li>I accepted that I need help with some things. We all do. Yes, this shit is getting real.</li>
+  <li>I buried my first startup, guestly, an event management app.</li>
+  <li>I ran, ran, ran like the wind because I thought a wolf was after me.</li>
+  <li>I quit my part-time job as a designer at a corrupting, money-laundering company only weeks before they fired the marketing department.</li>
+  <li>I have never been beaten in arm-wrestling (but I have not been challenged in a decade).</li>
+  <li>When <span class="grey">-haha-</span> I was nineteen I refused a job offer for Frankfurt Stock Exchange’s outsourced editorial team. Wow, that was really misleading.</li>
+  <li>I jumped a fence and climbed a trash mountain to save a chair. It is now my asses best friend.</li>
+    </ul>
+<h3>Yeah!</h3>
+<p>You’ve made it thus far. Now what?
+<br />
+It depends on who you are. Are we already acquainted? Use our regular means of communication and say hi!</p>
+<p>If not, look around some more and see if you like my work. If you think ’That guy might be full of shit but, dammit, he is a bold motherfucker.’ you, Sir, are spot on. I am the puppet master and you have just tangled my twine. What a mess you’ve made. Are you happy?</p> */
+
 /* SITE */
   Standards: HTML5, CSS3
   Components: jQuery
   Software: Espresso, Git, Tower, Chrome Dev Tools
+
+/* THANKS */
+  Name: Stephen Hawking, Greg Geraldo, Satan, Jesus, Ghandi, Elon Musk, ~~Bill Gates~~ [I said Satan already], [anyone who’s not dead?...], Peter Griffin, [that’s not a real person. I could thank Seth MacFarlane], Kafka, [I am bored now... let someone else finnish this list ^^]
